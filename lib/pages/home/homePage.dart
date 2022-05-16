@@ -6,6 +6,7 @@ import 'package:lastproject/pages/widget_/latestNews.dart';
 import 'package:lastproject/pages/widget_/otherNEws.dart';
 import 'package:lastproject/pages/widget_/tabbar.dart';
 import 'package:lastproject/size_config.dart';
+import 'package:lastproject/widgets/app_bar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({ Key? key }) : super(key: key);
@@ -14,7 +15,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig.init(context);
     return Scaffold(
-      appBar: thisAppbar(context),
+      backgroundColor: ColorConst.colorConst,
+
+      appBar: myAppBar().build(context),
       body: Column(children: [
           seeAll(),
           Expanded(
