@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lastproject/examplePage.dart';
 import 'package:lastproject/pages/bottonnavbar/bottomnavbar.dart';
+import 'package:lastproject/pages/home/homePage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +22,6 @@ class MyApp extends StatelessWidget {
           
 
         ),
-        home: BottomNavBAr());
+        home: HomePage());
   }
 }

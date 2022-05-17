@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lastproject/constants/const/color_const.dart';
+import 'package:lastproject/pages/searchPage/searchPage.dart';
 import 'package:lastproject/size_config.dart';
 
 class myAppBar extends StatelessWidget {
@@ -24,11 +25,16 @@ class myAppBar extends StatelessWidget {
               height: getHeight(43),
               width: MediaQuery.of(context).size.width * 0.8,
               child: InkWell(
+                onTap: () {
+                Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SearchPage()));
+                },
                 child: TextFormField(
                     enabled: false,
                     decoration: InputDecoration(
                         border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(15))),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(15))),
                         hintText: "smth has happened",
                         suffixIcon: Icon(Icons.search))),
               ),
